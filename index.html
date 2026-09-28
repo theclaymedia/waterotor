@@ -1,0 +1,1313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waterotor | Clean Energy from Moving Water</title>
+<meta name="description" content="Waterotor's patented hydrokinetic technology collects clean, affordable energy from water flowing as slow as 2 mph. Proven by the Canadian Navy and the Marine Institute.">
+<meta name="theme-color" content="#00244c">
+<link rel="icon" type="image/png" href="assets/logos/waterotor-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Public+Sans:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/images/hero-poster.jpg">
+<style>
+:root{
+  --navy:#00244c;
+  --navy-2:#062f5c;
+  --deep:#01558a;
+  --blue:#1d8ec2;
+  --sky:#8fd6f5;
+  --ink:#0c1b2a;
+  --muted:#4b5b6a;
+  --paper:#f4f6f5;
+  --sand:#eef1ee;
+  --line:#d6dde2;
+  --white:#fff;
+  --focus:#ffb000;
+  --wrap:1240px;
+  --gutter:clamp(20px,5vw,56px);
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,sans-serif;
+  --header-h:76px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--header-h) + 16px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 1.0625rem/1.65 var(--body);font-feature-settings:"tnum" 0}
+img,video{display:block;max-width:100%}
+svg{display:block;flex:none}
+img{height:auto}
+a{color:var(--deep);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+h1,h2,h3,h4{font-family:var(--display);font-stretch:92%;line-height:1.08;letter-spacing:-.015em;margin:0;color:inherit}
+h2{font-size:clamp(2rem,4.2vw,3.35rem);font-weight:650}
+h3{font-size:1.3rem;font-weight:650;line-height:1.2;letter-spacing:-.005em}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul,ol{margin:0;padding:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+[hidden]{display:none!important}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.wrap{width:100%;max-width:calc(var(--wrap) + var(--gutter)*2);margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(80px,11vw,152px)}
+.eyebrow{display:block;font:600 .8125rem/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--deep);margin-bottom:22px}
+.lede{font-size:clamp(1.075rem,1.4vw,1.25rem);line-height:1.6;color:var(--muted);max-width:40em}
+.icon{width:72px;height:72px;flex:none;color:var(--deep);fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 28px;border:1.5px solid transparent;border-radius:3px;font:600 1rem/1 var(--body);letter-spacing:.01em;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
+.btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--deep);color:var(--white)}
+.btn-primary:hover{background:var(--navy)}
+.btn-light{background:var(--white);color:var(--navy)}
+.btn-light:hover{background:var(--sky)}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:var(--white)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:var(--white)}
+.btn-outline{border-color:var(--deep);color:var(--deep)}
+.btn-outline:hover{background:var(--deep);color:var(--white)}
+.text-link{display:inline-flex;align-items:center;gap:.5em;font-weight:600;text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:3px}
+.text-link svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.text-link:hover svg{transform:translateX(3px)}
+
+/* Skip link */
+.skip{position:absolute;left:16px;top:-100px;z-index:200;background:var(--white);color:var(--navy);padding:12px 18px;font-weight:600;border-radius:3px}
+.skip:focus{top:12px}
+
+/* Header */
+.site-header{position:fixed;inset:0 0 auto;z-index:100;height:var(--header-h);color:var(--white);transition:background-color .3s,box-shadow .3s}
+.site-header.is-solid{background:var(--navy);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{width:132px;height:auto}
+.nav-list{display:flex;align-items:center;gap:clamp(18px,2.4vw,36px);list-style:none}
+.nav-list a{color:var(--white);text-decoration:none;font-weight:500;font-size:.975rem;padding:6px 0;border-bottom:1.5px solid transparent}
+.nav-list a:hover{border-bottom-color:currentColor}
+.nav-list .btn{min-height:44px;padding:0 20px;border-bottom:1.5px solid transparent}
+.nav-list a.btn-light{color:var(--navy)}
+.nav-list .login{opacity:.85}
+.nav-toggle{display:none;background:none;border:0;padding:10px;margin-right:-10px}
+.nav-toggle svg{width:28px;height:28px;max-width:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+.nav-toggle .close{display:none}
+.nav-toggle[aria-expanded="true"] .open{display:none}
+.nav-toggle[aria-expanded="true"] .close{display:block}
+@media (max-width:980px){
+  .nav-toggle{display:block}
+  .site-nav{position:fixed;inset:var(--header-h) 0 0;background:var(--navy);padding:24px var(--gutter) 40px;overflow-y:auto;visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}
+  .site-nav.is-open{visibility:visible;opacity:1}
+  .nav-list{flex-direction:column;align-items:stretch;gap:0}
+  .nav-list li{border-bottom:1px solid rgba(255,255,255,.12)}
+  .nav-list a{display:block;padding:18px 0;font-size:1.25rem;font-family:var(--display)}
+  .nav-list li:last-child{border:0;padding-top:24px}
+  .nav-list a.btn{display:flex;width:100%;min-height:56px;padding:0 20px;font-size:1.05rem;font-family:var(--body)}
+  body.nav-open{overflow:hidden}
+  .site-header:has(.is-open){background:var(--navy)}
+}
+
+/* Hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:grid;place-items:center;text-align:center;color:var(--white);overflow:hidden;background:var(--navy)}
+@supports (height:100dvh){.hero{min-height:100dvh}}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero::after{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at center,rgba(0,26,56,.35) 0%,rgba(0,26,56,.62) 70%),
+  linear-gradient(180deg,rgba(0,20,44,.55) 0%,rgba(0,20,44,.1) 30%,rgba(0,20,44,.1) 60%,rgba(0,20,44,.75) 100%)}
+.hero-content{position:relative;z-index:1;width:100%;max-width:1040px;padding:calc(var(--header-h) + 24px) var(--gutter) 96px;display:flex;flex-direction:column;align-items:center}
+.hero .eyebrow{color:var(--sky);margin-bottom:clamp(16px,3vh,28px);letter-spacing:.2em}
+.hero h1{font-size:clamp(2.6rem,min(7.4vw,11vh),6.4rem);font-weight:700;font-stretch:88%;line-height:.98;letter-spacing:-.025em;text-wrap:balance}
+.hero p.sub{max-width:34em;margin:clamp(18px,3.4vh,32px) auto 0;font-size:clamp(1.05rem,min(1.7vw,2.4vh),1.35rem);line-height:1.55;color:rgba(255,255,255,.9)}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:clamp(24px,4.5vh,44px)}
+.media-toggle{position:absolute;z-index:2;right:var(--gutter);bottom:28px;display:inline-flex;white-space:nowrap;align-items:center;gap:10px;background:rgba(0,20,44,.45);border:1px solid rgba(255,255,255,.5);border-radius:3px;color:var(--white);padding:10px 14px;font-size:.875rem;font-weight:500;backdrop-filter:blur(6px)}
+.media-toggle:hover{background:rgba(0,20,44,.7)}
+.media-toggle svg{width:16px;height:16px;fill:currentColor}
+.media-toggle .i-play{display:none}
+.media-toggle[aria-pressed="true"] .i-play{display:block}
+.media-toggle[aria-pressed="true"] .i-pause{display:none}
+.hero-meta{position:absolute;z-index:2;left:var(--gutter);bottom:34px;font-size:.875rem;color:rgba(255,255,255,.8);margin:0}
+@media (max-width:640px){.hero .eyebrow{letter-spacing:.14em}.hero-meta{display:none}.media-toggle{left:50%;right:auto;transform:translateX(-50%);bottom:20px}.hero-content{padding-bottom:88px}}
+@media (max-height:520px) and (orientation:landscape){.hero-actions .btn{min-height:44px}}
+
+/* Partners */
+.partners{padding-block:44px;border-bottom:1px solid var(--line)}
+.partners .wrap{display:grid;grid-template-columns:minmax(180px,240px) 1fr;align-items:center;gap:40px}
+.partners p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.45}
+.logo-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 40px;list-style:none}
+.logo-row img{height:56px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.78;mix-blend-mode:multiply;transition:filter .3s,opacity .3s}
+.logo-row img.wide{height:48px}
+.logo-row li:hover img{filter:none;opacity:1}
+@media (max-width:860px){.partners .wrap{grid-template-columns:1fr;gap:24px;text-align:center}.logo-row{justify-content:center}}
+
+/* Technology */
+.split-head{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,96px);align-items:end}
+.split-head h2{max-width:13em}
+@media (max-width:860px){.split-head{grid-template-columns:1fr;align-items:start}}
+.tech-visual{margin-top:clamp(48px,7vw,88px);display:grid;grid-template-columns:1.55fr 1fr;gap:16px}
+.tech-visual figure{margin:0;position:relative;overflow:hidden;border-radius:2px;background:var(--sand)}
+.tech-visual img{width:100%;height:100%;object-fit:cover}
+.tech-visual figure:first-child{aspect-ratio:16/10.5}
+.tech-visual .exploded{background:#fff;border:1px solid var(--line)}
+.tech-visual .exploded img{object-fit:contain;padding:8%}
+.tech-visual figcaption{position:absolute;left:0;bottom:0;padding:14px 18px;font-size:.85rem;color:var(--white);background:linear-gradient(0deg,rgba(0,20,44,.75),transparent);width:100%}
+.tech-visual .exploded figcaption{color:var(--muted);background:none}
+@media (max-width:760px){.tech-visual{grid-template-columns:1fr}.tech-visual .exploded{aspect-ratio:3/2}}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);margin-top:clamp(56px,7vw,96px)}
+.stat{padding:28px 28px 8px 0}
+.stat + .stat{padding-left:28px;border-left:1px solid var(--line)}
+.stat b{display:block;font:700 clamp(2.4rem,4.4vw,3.6rem)/1 var(--display);font-stretch:85%;letter-spacing:-.03em;color:var(--navy);font-variant-numeric:tabular-nums}
+.stat b small{font-size:.45em;font-weight:600;letter-spacing:0;margin-left:.12em}
+.stat span{display:block;margin-top:12px;color:var(--muted);font-size:.975rem;line-height:1.45;max-width:16em}
+@media (max-width:860px){.stat-row{grid-template-columns:1fr 1fr}.stat:nth-child(3){padding-left:0;border-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:460px){.stat-row{grid-template-columns:1fr}.stat,.stat + .stat{padding-left:0;border-left:0}.stat + .stat{border-top:1px solid var(--line)}}
+
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,4vw,64px);margin-top:clamp(64px,8vw,112px);list-style:none}
+.feature{display:flex;gap:24px;align-items:flex-start}
+.feature h3{margin-top:6px}
+.feature h3{margin-bottom:10px}
+.feature p{color:var(--muted);font-size:1rem}
+@media (max-width:900px){.features{grid-template-columns:1fr;max-width:560px}}
+
+.how{background:var(--paper)}
+.how-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,6vw,96px);align-items:center}
+.how-grid h2{margin-bottom:28px}
+.how-grid .lede{margin-bottom:1em}
+.video-frame{margin:0}
+.video-frame video{width:100%;aspect-ratio:16/9;background:var(--navy);border-radius:2px;object-fit:cover}
+.video-frame figcaption{margin-top:14px;font-size:.9rem;color:var(--muted)}
+.video-frame details{margin-top:8px;font-size:.9rem;color:var(--muted)}
+.video-frame summary{cursor:pointer;color:var(--deep);font-weight:600}
+@media (max-width:900px){.how-grid{grid-template-columns:1fr}}
+
+.diff{display:grid;grid-template-columns:repeat(2,1fr);gap:48px clamp(40px,6vw,96px);list-style:none;margin-top:clamp(64px,8vw,104px);padding-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
+.diff li{display:flex;gap:22px}
+.diff h3{margin-bottom:8px}
+.diff p{color:var(--muted);font-size:1rem}
+@media (max-width:760px){.diff{grid-template-columns:1fr}}
+
+/* Environments */
+.env-head{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.env-head h2{max-width:14em}
+.env-head .lede{max-width:30em}
+.env-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,5vw,64px);list-style:none}
+.env{position:relative;display:flex;flex-direction:column}
+.env img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.env h3{margin:20px 0 8px}
+.env p{font-size:.975rem;color:var(--muted)}
+@media (max-width:1000px){.env-grid{grid-template-columns:repeat(2,1fr);gap:40px 16px}}
+@media (max-width:520px){.env-grid{grid-template-columns:1fr}.env img{aspect-ratio:3/2}}
+
+.apps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px clamp(32px,4vw,64px);list-style:none;margin-top:clamp(64px,8vw,96px)}
+.apps li{display:flex;gap:22px}
+.apps .icon{width:64px;height:64px}
+.apps h3{font-size:1.15rem;margin-bottom:6px}
+.apps p{font-size:.975rem;color:var(--muted)}
+@media (max-width:960px){.apps{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.apps{grid-template-columns:1fr}}
+.apps-title{margin-top:clamp(72px,9vw,120px);font-size:clamp(1.5rem,2.4vw,2rem);max-width:22em}
+
+/* Proof (dark) */
+.dark{background:var(--navy);color:var(--white)}
+.dark .eyebrow{color:var(--sky)}
+.dark .lede,.dark p{color:rgba(255,255,255,.82)}
+.dark .icon{color:var(--sky)}
+.dark a{color:var(--sky)}
+.proof-band{position:relative;width:100%;margin-top:clamp(48px,6vw,80px);aspect-ratio:21/8;overflow:hidden;border-radius:2px}
+@media (max-width:900px){.proof-band{aspect-ratio:16/10}}
+@media (max-width:520px){.proof-band{aspect-ratio:4/5}}
+.proof-band video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.proof-band .media-toggle{bottom:18px;right:18px;left:auto;transform:none}
+.big-stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(56px,7vw,88px);border-top:1px solid rgba(255,255,255,.3);list-style:none}
+.big-stats li{padding:28px 24px 0 0}
+.big-stats li + li{padding-left:24px;border-left:1px solid rgba(255,255,255,.14)}
+.big-stats b{display:block;font:700 clamp(2.2rem,4vw,3.4rem)/1 var(--display);font-stretch:85%;letter-spacing:-.03em;color:var(--white)}
+.big-stats span{display:block;margin-top:12px;font-size:.95rem;line-height:1.45;color:rgba(255,255,255,.78)}
+@media (max-width:860px){.big-stats{grid-template-columns:1fr 1fr}.big-stats li:nth-child(3){padding-left:0;border-left:0}.big-stats li:nth-child(n+3){margin-top:28px;border-top:1px solid rgba(255,255,255,.14)}}
+@media (max-width:460px){.big-stats{grid-template-columns:1fr}.big-stats li,.big-stats li + li{padding-left:0;border-left:0}.big-stats li + li{margin-top:28px;border-top:1px solid rgba(255,255,255,.14)}}
+
+.case{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:center;margin-top:clamp(80px,10vw,136px)}
+.case.flip .case-media{order:2}
+.case-media{position:relative}
+.case-media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.case-media img.inset{position:absolute;width:42%;aspect-ratio:1;right:-24px;bottom:-40px;border:6px solid var(--navy)}
+.case.flip .case-media img.inset{right:auto;left:-24px}
+.case .kicker{font:600 .8125rem/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--sky);margin-bottom:16px}
+.case h3{font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:650;margin-bottom:22px}
+.checks{list-style:none;margin-top:28px;display:grid;gap:16px}
+.checks li{display:flex;gap:14px;align-items:flex-start;line-height:1.5}
+.checks svg{width:26px;height:26px;flex:none;fill:none;stroke:var(--sky);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:-1px}
+@media (max-width:860px){.case{grid-template-columns:1fr}.case.flip .case-media{order:0}.case-media img.inset{right:12px;bottom:-28px;width:38%}.case.flip .case-media img.inset{left:12px}}
+
+.field{margin-top:clamp(96px,11vw,152px)}
+.field-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.field-head h3{font-size:clamp(1.6rem,2.6vw,2.2rem)}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(120px,14vw,190px);gap:12px;list-style:none}
+.gallery li{position:relative;overflow:hidden;border-radius:2px;margin:0}
+.gallery figure{margin:0;height:100%}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery li:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:.825rem;line-height:1.35;color:var(--white);background:linear-gradient(0deg,rgba(0,20,44,.85),transparent)}
+.g1{grid-column:span 5;grid-row:span 2}.g2{grid-column:span 4}.g3{grid-column:span 3;grid-row:span 2}.g4{grid-column:span 4}
+.g5{grid-column:span 3;grid-row:span 2}.g6{grid-column:span 5}.g7{grid-column:span 4;grid-row:span 2}.g8{grid-column:span 5}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.gallery li{grid-column:span 1!important;grid-row:span 1!important}.gallery li:first-child{grid-column:span 2!important;grid-row:span 2!important}}
+
+/* Opportunity */
+.opp-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.market{font:700 clamp(4.5rem,12vw,10rem)/.85 var(--display);font-stretch:80%;letter-spacing:-.045em;color:var(--navy);margin:8px 0 0}
+.market small{display:block;font:500 1rem/1.4 var(--body);letter-spacing:0;color:var(--muted);margin-top:18px}
+@media (max-width:860px){.opp-top{grid-template-columns:1fr}}
+.opp-stats{display:grid;grid-template-columns:repeat(3,1fr);list-style:none;margin-top:clamp(56px,7vw,96px);border-top:1px solid var(--ink)}
+.opp-stats li{padding:28px 28px 0 0}
+.opp-stats li + li{padding-left:28px;border-left:1px solid var(--line)}
+.opp-stats b{display:block;font:700 clamp(2.2rem,4vw,3.3rem)/1 var(--display);font-stretch:85%;letter-spacing:-.03em;color:var(--navy)}
+.opp-stats span{display:block;margin-top:12px;color:var(--muted);font-size:.975rem;line-height:1.45}
+@media (max-width:760px){.opp-stats{grid-template-columns:1fr}.opp-stats li,.opp-stats li + li{padding-left:0;border-left:0}.opp-stats li + li{border-top:1px solid var(--line)}.opp-stats li{padding-bottom:24px}}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(72px,9vw,120px);border-radius:2px;overflow:hidden}
+.compare > div{padding:clamp(32px,4.5vw,56px)}
+.compare .before{background:var(--sand)}
+.compare .after{background:var(--deep);color:var(--white)}
+.compare h3{font-size:1.5rem;margin-bottom:28px}
+.compare dl{margin:0;display:grid;gap:24px}
+.compare dt{font-weight:700;margin-bottom:4px}
+.compare dd{margin:0;color:var(--muted)}
+.compare .after dd{color:rgba(255,255,255,.85)}
+.compare .price{font:700 clamp(2.6rem,5vw,4rem)/1 var(--display);font-stretch:85%;letter-spacing:-.03em;margin-bottom:28px}
+.compare .price small{font:500 1rem var(--body);letter-spacing:0;margin-left:6px;opacity:.8}
+@media (max-width:760px){.compare{grid-template-columns:1fr}}
+
+.regions{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 40px;list-style:none;margin-top:44px}
+.regions h3{font-size:1.15rem;margin-bottom:8px;padding-top:18px;border-top:2px solid var(--deep)}
+.regions p{font-size:.95rem;color:var(--muted)}
+@media (max-width:520px){.regions{grid-template-columns:1fr}}
+.reach{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:center;margin-top:clamp(80px,10vw,136px)}
+@media (max-width:900px){.reach{grid-template-columns:1fr}}
+.yt{position:relative;aspect-ratio:16/9;background:#000;border-radius:2px;overflow:hidden}
+.yt img{width:100%;height:100%;object-fit:cover;opacity:.9;transition:opacity .3s}
+.yt button{position:absolute;inset:0;z-index:1;width:100%;border:0;background:transparent;display:flex;align-items:center;justify-content:center;gap:14px;color:var(--white);font-weight:600;font-size:1.05rem}
+.yt button svg{width:72px;height:72px}
+.yt button:hover + img,.yt button:focus-visible + img{opacity:.7}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* Milestones */
+.milestones{background:var(--paper)}
+.timeline{list-style:none;margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(2,1fr);column-gap:clamp(40px,6vw,96px)}
+.timeline > li{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.timeline time{font:700 1.5rem/1.1 var(--display);font-stretch:85%;color:var(--deep);font-variant-numeric:tabular-nums}
+.timeline h3{font-size:1.08rem;margin-bottom:6px}
+.timeline p{font-size:.95rem;color:var(--muted)}
+.timeline ul{list-style:disc;padding-left:1.1em;font-size:.95rem;color:var(--muted);display:grid;gap:4px}
+@media (max-width:860px){.timeline{grid-template-columns:1fr}.timeline > li{grid-template-columns:96px 1fr}}
+
+/* Team */
+.team-hero{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,6vw,96px);align-items:center}
+.team-hero img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+@media (max-width:900px){.team-hero{grid-template-columns:1fr}}
+.people{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 28px;list-style:none;margin-top:clamp(72px,9vw,120px)}
+.person img{width:100%;aspect-ratio:5/6;object-fit:cover;object-position:center 22%;border-radius:2px;filter:grayscale(1) contrast(1.02);transition:filter .4s}
+.person:hover img,.person:focus-within img{filter:none}
+.person h3{margin-top:20px;font-size:1.3rem}
+.person .role{margin:4px 0 12px;color:var(--deep);font-weight:600;font-size:.95rem}
+.person details{font-size:.95rem;color:var(--muted)}
+.person summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:inline-flex;align-items:center;gap:8px;border-bottom:1.5px solid currentColor;padding-bottom:2px}
+.person summary::-webkit-details-marker{display:none}
+.person summary svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;transition:transform .2s}
+.person details[open] summary svg{transform:rotate(45deg)}
+.person details p{margin-top:14px}
+@media (max-width:900px){.people{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.people{grid-template-columns:1fr}}
+
+.achieve{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;list-style:none;margin-top:clamp(72px,9vw,112px);padding-top:48px;border-top:1px solid var(--line)}
+.achieve b{display:block;font:700 clamp(2.2rem,3.6vw,3rem)/1 var(--display);font-stretch:85%;color:var(--navy);letter-spacing:-.03em;margin-bottom:12px}
+.achieve span{font-size:.975rem;color:var(--muted);line-height:1.45;display:block}
+.achieve .icon{margin-bottom:14px;width:64px;height:64px}
+@media (max-width:900px){.achieve{grid-template-columns:1fr 1fr}}
+@media (max-width:500px){.achieve{grid-template-columns:1fr}}
+
+/* Quote */
+.quote{position:relative;overflow:hidden;color:var(--white);background:var(--navy)}
+.quote video,.quote .quote-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.quote .wrap{position:relative;z-index:1;text-align:center}
+.quote blockquote{margin:0 auto;max-width:980px}
+.quote blockquote p{font:500 clamp(1.7rem,3.6vw,3rem)/1.2 var(--display);font-stretch:95%;letter-spacing:-.015em;color:var(--white);text-wrap:balance}
+.quote figcaption{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:.95rem;color:rgba(255,255,255,.85)}
+.quote figcaption img{width:132px;filter:brightness(0) invert(1)}
+.quote .media-toggle{bottom:20px}
+
+/* Invest */
+.invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.invest-grid .aside{position:relative}
+.invest-grid .aside img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.seek{position:absolute;left:-1px;bottom:-1px;background:var(--white);padding:28px 32px 0 0;max-width:78%}
+.seek b{display:block;font:700 clamp(2.6rem,5vw,4rem)/1 var(--display);font-stretch:85%;letter-spacing:-.03em;color:var(--navy)}
+.seek span{display:block;margin-top:8px;color:var(--muted);font-size:.975rem;line-height:1.45}
+.reasons{list-style:none;display:grid;gap:36px;margin:44px 0 0}
+.reasons li{display:flex;gap:22px}
+.reasons h3{font-size:1.2rem;margin-bottom:6px}
+.reasons p{font-size:1rem;color:var(--muted)}
+@media (max-width:900px){.invest-grid{grid-template-columns:1fr}.invest-grid .aside{max-width:560px}}
+.steps{list-style:none;counter-reset:step;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(72px,9vw,112px);border-top:1px solid var(--ink)}
+.steps li{counter-increment:step;padding:28px 28px 0 0}
+.steps li + li{padding-left:28px;border-left:1px solid var(--line)}
+.steps li::before{content:"Step " counter(step);display:block;font:600 .8125rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--deep);margin-bottom:14px}
+.steps h3{font-size:1.2rem;margin-bottom:8px}
+.steps p{font-size:.95rem;color:var(--muted)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}.steps li:nth-child(3){padding-left:0;border-left:0}.steps li:nth-child(n+3){margin-top:28px;border-top:1px solid var(--line)}}
+@media (max-width:500px){.steps{grid-template-columns:1fr}.steps li,.steps li + li{padding-left:0;border-left:0}.steps li + li{margin-top:28px;border-top:1px solid var(--line)}}
+.invest-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:48px}
+
+/* News */
+.news{background:var(--paper)}
+.news-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.news-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);margin-top:clamp(40px,5vw,64px)}
+.featured img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:2px}
+.featured .date,.news-list .date{display:block;font-size:.875rem;color:var(--muted);margin-bottom:8px}
+.featured .date{margin-top:24px}
+.featured h3{font-size:clamp(1.5rem,2.4vw,2rem);margin-bottom:14px}
+.featured h3 a,.news-list h3 a{color:var(--ink);text-decoration:none}
+.featured h3 a:hover,.news-list h3 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.featured p{color:var(--muted)}
+.news-list{list-style:none}
+.news-list li{padding:22px 0;border-top:1px solid var(--line)}
+.news-list li:last-child{border-bottom:1px solid var(--line)}
+.news-list h3{font-size:1.1rem;margin-bottom:6px;line-height:1.3}
+.news-list p{font-size:.95rem;color:var(--muted)}
+@media (max-width:900px){.news-grid{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,6vw,96px);align-items:start}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:24px 0;font:600 1.15rem/1.35 var(--display);font-stretch:95%}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:22px;height:22px;flex:none;margin-top:2px;fill:none;stroke:var(--deep);stroke-width:2;stroke-linecap:round;transition:transform .25s}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq .answer{padding:0 44px 28px 0;color:var(--muted)}
+.faq .answer ul{padding-left:1.2em;display:grid;gap:6px;margin-top:12px}
+
+/* Contact */
+.contact{position:relative;overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.contact h2{font-size:clamp(2.4rem,5.4vw,4.4rem);margin-bottom:24px}
+.contact-list{list-style:none;display:grid;gap:22px;margin-top:40px}
+.contact-list li{display:flex;gap:18px;align-items:flex-start}
+.contact-list svg{width:32px;height:32px;flex:none;fill:none;stroke:var(--sky);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.contact-list span{display:block;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:2px}
+.contact-list a{color:var(--white);font-size:1.1rem;text-decoration:none}
+.contact-list a:hover{text-decoration:underline}
+.signup{background:var(--white);color:var(--ink);padding:clamp(28px,4vw,48px);border-radius:2px}
+.signup h3{font-size:1.6rem;margin-bottom:10px}
+.signup p{color:var(--muted)!important;font-size:1rem}
+.signup label{display:block;font-weight:600;margin:24px 0 8px;font-size:.95rem}
+.signup input{width:100%;min-height:52px;padding:0 16px;border:1.5px solid #8795a1;border-radius:3px;font:inherit;color:var(--ink);background:var(--white)}
+.signup input:focus-visible{outline:3px solid var(--focus);outline-offset:1px;border-color:var(--deep)}
+.signup .btn{width:100%;margin-top:16px}
+.signup a{color:var(--deep)}
+.signup .hint{font-size:.85rem;margin-top:14px}
+.signup .status{margin-top:14px;font-weight:600;color:#1a6b3c!important}
+.signup [aria-invalid="true"]{border-color:#b3261e}
+.signup .error{color:#b3261e!important;font-size:.9rem;margin-top:8px;font-weight:600}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+/* Footer */
+.site-footer{background:#001a38;color:rgba(255,255,255,.8);padding:72px 0 36px;font-size:.95rem}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.foot-top img{width:170px;margin-bottom:22px}
+.site-footer h2{font:600 .8125rem/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--white);margin-bottom:18px}
+.site-footer ul{list-style:none;display:grid;gap:10px}
+.site-footer a{color:rgba(255,255,255,.85);text-decoration:none}
+.site-footer a:hover{color:var(--white);text-decoration:underline}
+.social{display:flex!important;gap:22px!important;margin-top:24px}
+.social svg{width:26px;height:26px;fill:currentColor}
+.social a{display:block;padding:4px}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px;margin-top:64px;padding-top:28px;border-top:1px solid rgba(255,255,255,.14);font-size:.875rem}
+.foot-bottom ul{display:flex;flex-wrap:wrap;gap:8px 24px}
+.linklike{background:none;border:0;padding:0;color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:.2em;font-size:inherit}
+.linklike:hover{color:var(--white)}
+@media (max-width:900px){.foot-top{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot-top{grid-template-columns:1fr}}
+
+/* Cookie consent */
+.consent{position:fixed;z-index:150;left:20px;bottom:20px;width:min(380px,calc(100vw - 32px));max-height:calc(100vh - 40px);overflow-y:auto;background:var(--white);color:var(--ink);border-left:4px solid var(--deep);border-radius:3px;box-shadow:0 18px 50px rgba(0,20,44,.28),0 2px 8px rgba(0,20,44,.12);padding:26px 26px 22px;transform:translateX(calc(-100% - 40px));transition:transform .45s cubic-bezier(.2,.8,.2,1);visibility:hidden}
+.consent.is-visible{transform:none;visibility:visible}
+.consent h2{font-size:1.25rem;font-weight:650;margin-bottom:10px}
+.consent p{font-size:.925rem;color:var(--muted);line-height:1.55}
+.consent-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.consent-actions .btn{min-height:46px;padding:0 14px;font-size:.925rem}
+.consent-actions .full{grid-column:1/-1}
+.consent .btn-plain{background:none;border:0;color:var(--deep);font-weight:600;text-decoration:underline;text-underline-offset:.2em;min-height:40px;padding:0}
+.prefs{margin-top:18px;border-top:1px solid var(--line);padding-top:6px}
+.prefs[hidden]{display:none}
+.pref{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.pref label{font-weight:600;font-size:.95rem;cursor:pointer}
+.pref small{display:block;font-weight:400;color:var(--muted);font-size:.85rem;margin-top:2px;line-height:1.4}
+.pref input{width:22px;height:22px;flex:none;accent-color:var(--deep);margin-top:2px;cursor:pointer}
+.pref input:disabled{cursor:not-allowed}
+@media (max-width:480px){.consent{left:16px;bottom:16px}}
+@media (prefers-reduced-motion:reduce){.consent{transition:none}}
+
+/* Reveal */
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.gallery img,.btn svg,.text-link svg{transition:none}}
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5L19.5 7"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1"/><rect x="14" y="4.5" width="4" height="15" rx="1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.8v14.4a.8.8 0 0 0 1.2.7l11.3-7.2a.8.8 0 0 0 0-1.4L8.2 4.1A.8.8 0 0 0 7 4.8z"/></symbol>
+
+  <!-- Feature icons, 48px grid, stroked -->
+  <symbol id="i-capture" viewBox="0 0 48 48"><path d="M7 33a17 17 0 0 1 34 0"/><path d="M24 33l9.5-10.5"/><circle cx="24" cy="33" r="2.6"/><path d="M11.6 21.4l2.6 2M24 16v3.4M36.4 21.4l-2.6 2M8.5 27.5l3.2.8M39.5 27.5l-3.2.8"/><path d="M5 40h38"/></symbol>
+  <symbol id="i-fish" viewBox="0 0 48 48"><path d="M13 24c4.5-6.4 10.8-9.6 17.5-9.6 5.4 0 9.7 3.4 12.5 9.6-2.8 6.2-7.1 9.6-12.5 9.6C23.8 33.6 17.5 30.4 13 24z"/><path d="M13 24L5 16.5v15z"/><path d="M27 17.2c2.2 4.4 2.2 9.2 0 13.6"/><circle cx="35.5" cy="22" r="1.4" fill="currentColor" stroke="none"/><path d="M33 40c2.5 0 3-1.5 5.5-1.5S41.5 40 44 40M4 8c2.5 0 3 1.5 5.5 1.5S12.5 8 15 8"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 48 48"><rect x="6" y="30" width="8" height="11" rx="1"/><rect x="20" y="20" width="8" height="21" rx="1"/><rect x="34" y="8" width="8" height="33" rx="1"/><path d="M8 22l8-7 6 3 12-10"/><path d="M29 8h5v5"/></symbol>
+  <symbol id="i-flow" viewBox="0 0 48 48"><path d="M4 15q5-5.5 10 0t10 0 10 0 10 0"/><path d="M4 24q5-5.5 10 0t10 0 10 0 10 0"/><path d="M4 33q5-5.5 10 0t10 0 10 0 10 0"/><path d="M38 40h6M41 37l3 3-3 3"/></symbol>
+  <symbol id="i-modular" viewBox="0 0 48 48"><rect x="6" y="6" width="15" height="15" rx="2"/><rect x="27" y="6" width="15" height="15" rx="2"/><rect x="6" y="27" width="15" height="15" rx="2"/><path d="M34.5 29v11M29 34.5h11"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 48 48"><path d="M41 24A17 17 0 1 1 35.2 11.2"/><path d="M36.5 4.5v7.2h-7.2"/><path d="M24 14v10l6.5 4.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 48 48"><path d="M9 39C9 21 20.5 9.5 41 7.5 40 28 29 39 12.5 39z"/><path d="M9 39l18-18M20 28h7.5M26 22v-6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 48 48"><path d="M5 23L24 8l19 15"/><path d="M10 19.5V41h28V19.5"/><path d="M20 41V30h8v11"/><path d="M33 12V7h4v8.2"/></symbol>
+  <symbol id="i-buoy" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="7.5"/><path d="M12 12l6.7 6.7M36 12l-6.7 6.7M12 36l6.7-6.7M36 36l-6.7-6.7"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M29.5 18.8c-.9-1.9-3-3.1-5.5-3.1-3.1 0-5.3 1.7-5.3 4.1 0 2.6 2.3 3.5 5.3 4.2 3.2.7 5.5 1.7 5.5 4.4s-2.3 4.3-5.5 4.3c-2.7 0-4.9-1.3-5.8-3.4"/><path d="M24 12.5v3.2M24 32.7v3"/></symbol>
+  <symbol id="i-platform" viewBox="0 0 48 48"><path d="M14 38l3.5-17M34 38l-3.5-17M16 31h16M17 25.5h14"/><path d="M9 21h30"/><path d="M19 21V9h7v12"/><path d="M26 11.5h6l1.5-3"/><path d="M3 41q3.5-3.5 7 0t7 0 7 0 7 0 7 0 7 0"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 48 48"><path d="M5 41V23l10 6v-6l10 6v-6l10 6V8h7v33z"/><path d="M11 35h4M20 35h4M29 35h4M3 41h42"/></symbol>
+  <symbol id="i-island" viewBox="0 0 48 48"><path d="M7 37q8.5-7 17-7t17 7"/><path d="M25 30c0-6 .8-10.5 3-14.5"/><path d="M28 15.5c-3.6-3.2-8.6-3.4-12-.6M28 15.5c3.6-3.2 8.6-3.4 12-.6M28 15.5c-.4-3.8-3-6.6-7-7.5M28 15.5c1.6-3.4 4.8-5.2 8.6-5"/><path d="M3 42q3.5-3 7 0t7 0 7 0 7 0 7 0 7 0"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="7.5" ry="17"/><path d="M7 24h34M9.4 15.5h29.2M9.4 32.5h29.2"/></symbol>
+  <symbol id="i-growth" viewBox="0 0 48 48"><path d="M5 37l12-12 8 8L42 16"/><path d="M31 16h11v11"/><path d="M5 43h38"/></symbol>
+  <symbol id="i-revenue" viewBox="0 0 48 48"><path d="M24 7a17 17 0 1 0 17 17H24z"/><path d="M29 4a15 15 0 0 1 15 15H29z"/></symbol>
+  <symbol id="i-patent" viewBox="0 0 48 48"><path d="M35 23V14l-8-8H10v36h14"/><path d="M27 6v8h8M16 20h13M16 26h9M16 32h5"/><circle cx="33.5" cy="32" r="6.5"/><path d="M29.8 37.3L28.5 44l5-2.6 5 2.6-1.3-6.7"/></symbol>
+  <symbol id="i-lab" viewBox="0 0 48 48"><path d="M18 5h12M20 5v13L8.5 38.5A3 3 0 0 0 11.1 43h25.8a3 3 0 0 0 2.6-4.5L28 18V5"/><path d="M13 31q5.5-3 11 0t11 0"/></symbol>
+  <symbol id="i-award" viewBox="0 0 48 48"><circle cx="24" cy="18" r="12"/><path d="M24 11.5l2 4.2 4.5.6-3.3 3.1.8 4.5-4-2.2-4 2.2.8-4.5-3.3-3.1 4.5-.6z"/><path d="M16.5 27.5L13 43l11-5 11 5-3.5-15.5"/></symbol>
+
+  <!-- Contact -->
+  <symbol id="i-pin" viewBox="0 0 32 32"><path d="M16 29s10-8.6 10-16a10 10 0 0 0-20 0c0 7.4 10 16 10 16z"/><circle cx="16" cy="13" r="3.6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 32 32"><path d="M28 22.4v3.8a2.6 2.6 0 0 1-2.8 2.6A25.4 25.4 0 0 1 3.2 6.8 2.6 2.6 0 0 1 5.8 4h3.8a2.6 2.6 0 0 1 2.6 2.2c.2 1.3.5 2.5.9 3.6a2.6 2.6 0 0 1-.6 2.8l-1.6 1.6a20.8 20.8 0 0 0 7.9 7.9l1.6-1.6a2.6 2.6 0 0 1 2.8-.6c1.1.4 2.3.7 3.6.9a2.6 2.6 0 0 1 2.2 2.6z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 32 32"><rect x="3.5" y="6.5" width="25" height="19" rx="2"/><path d="M4.5 8l11.5 9 11.5-9"/></symbol>
+
+  <!-- Social -->
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.6 21.5v-8.2h2.8l.4-3.3h-3.2V7.9c0-.9.3-1.6 1.6-1.6h1.7V3.4a23 23 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3V10H7.4v3.3h2.8v8.2z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.8 2.5h8.4a5.3 5.3 0 0 1 5.3 5.3v8.4a5.3 5.3 0 0 1-5.3 5.3H7.8a5.3 5.3 0 0 1-5.3-5.3V7.8a5.3 5.3 0 0 1 5.3-5.3zm0 1.9a3.4 3.4 0 0 0-3.4 3.4v8.4a3.4 3.4 0 0 0 3.4 3.4h8.4a3.4 3.4 0 0 0 3.4-3.4V7.8a3.4 3.4 0 0 0-3.4-3.4zM12 7.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 1.9a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8zm5.1-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M5.2 3a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4zM3.3 9h3.8v12H3.3zM9.5 9h3.6v1.7h.1c.5-.9 1.7-2 3.6-2 3.9 0 4.6 2.5 4.6 5.8V21h-3.8v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.5z"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.6 2.6 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></symbol>
+  <symbol id="i-yt-play" viewBox="0 0 72 72"><circle cx="36" cy="36" r="34" fill="rgba(0,36,76,.55)" stroke="#fff" stroke-width="2"/><path d="M29 24.5v23a1 1 0 0 0 1.5.9l18.2-11.5a1 1 0 0 0 0-1.8L30.5 23.6a1 1 0 0 0-1.5.9z" fill="#fff"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to main content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Waterotor Energy Technologies, back to top">
+      <img src="assets/logos/waterotor-logo-white.svg" alt="" width="150" height="60">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span>
+      <svg class="open" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      <svg class="close" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#proof">Proof</a></li>
+        <li><a href="#opportunity">Opportunity</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a class="login" href="https://www.waterotor.com/investors/">Investor Login</a></li>
+        <li><a class="btn btn-light" href="#invest">Invest Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <video class="hero-media" id="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-poster.jpg" aria-hidden="true">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <p class="eyebrow">Revolutionizing Renewable Energy</p>
+      <h1 id="hero-title">Powering the Future with Moving Water</h1>
+      <p class="sub">Waterotor’s patented hydrokinetic technology collects clean, affordable energy from moving water, in flows as slow as 2 mph.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#technology">Explore the Technology <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#invest">Invest in Waterotor</a>
+      </div>
+    </div>
+    <p class="hero-meta">Ottawa, Canada. Est. 2011.</p>
+    <button class="media-toggle" type="button" data-video="hero-video" aria-pressed="false">
+      <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+      <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+      <span class="label">Pause background video</span>
+    </button>
+  </section>
+
+  <!-- Partners -->
+  <section class="partners" aria-label="Partners and validators">
+    <div class="wrap">
+      <p>Trusted by leading companies and research institutions worldwide.</p>
+      <ul class="logo-row">
+        <li><img class="wide" src="assets/logos/chttc.jpg" alt="Canadian Hydrokinetic Turbine Test Centre" width="170" height="60" loading="lazy"></li>
+        <li><img class="wide" src="assets/logos/marine-institute.jpg" alt="Marine Institute, Memorial University" width="170" height="60" loading="lazy"></li>
+        <li><img src="assets/logos/black-mcdonald.jpg" alt="Black and McDonald" width="56" height="56" loading="lazy"></li>
+        <li><img src="assets/logos/design-1st.jpg" alt="Design 1st" width="56" height="56" loading="lazy"></li>
+        <li><img src="assets/logos/rts-plastics.jpg" alt="RTS Plastics" width="56" height="56" loading="lazy"></li>
+        <li><img src="assets/logos/nelson.png" alt="Nelson" width="90" height="56" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section class="section" id="technology" aria-labelledby="tech-title">
+    <div class="wrap">
+      <div class="split-head reveal">
+        <div>
+          <span class="eyebrow">The Technology</span>
+          <h2 id="tech-title">Groundbreaking technology. Proven results.</h2>
+        </div>
+        <div>
+          <p class="lede">Waterotor’s water power generator collects hydrokinetic power from flowing water with unmatched efficiency and affordability. Engineered to operate in flows as low as 2 mph, it turns rivers, canals, tidal and ocean currents into reliable power, 24 hours a day.</p>
+        </div>
+      </div>
+
+      <div class="tech-visual reveal">
+        <figure>
+          <img src="assets/images/waterotor-underwater.jpg" alt="A blue and white Waterotor unit suspended underwater from a lifting frame" loading="lazy" width="1350" height="1800" style="object-position:center 60%">
+          <figcaption>Waterotor units are rotomolded and built to stay submerged in fresh or salt water.</figcaption>
+        </figure>
+        <figure class="exploded">
+          <img src="assets/images/waterotor-exploded-view.jpg" alt="Exploded technical drawing of the Waterotor showing the rotor drum, curved blades, side plates and generator" loading="lazy" width="1200" height="800">
+          <figcaption>Exploded view: rotor drum, patented blades and generator.</figcaption>
+        </figure>
+      </div>
+
+      <div class="stat-row reveal" role="list">
+        <div class="stat" role="listitem"><b>2<small>mph</small></b><span>Minimum water speed needed to generate power</span></div>
+        <div class="stat" role="listitem"><b>60<small>%</small></b><span>Of the energy in moving water captured, at peak</span></div>
+        <div class="stat" role="listitem"><b>$0.05</b><span>Per kWh, cheaper than diesel, wind and solar</span></div>
+        <div class="stat" role="listitem"><b>24/7</b><span>Continuous generation, with no dependence on sun or wind</span></div>
+      </div>
+
+      <ul class="features">
+        <li class="feature reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-capture"/></svg>
+          <div><h3>Up to 60% energy capture</h3><p>Efficiently converts up to 60% of the available energy in moving water into electricity.</p></div>
+        </li>
+        <li class="feature reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-fish"/></svg>
+          <div><h3>Zero harm to marine life</h3><p>No fuel, no emissions and no threat to fish or the ecosystems they live in.</p></div>
+        </li>
+        <li class="feature reveal">
+          <svg class="icon" aria-hidden="true"><use href="#i-scale"/></svg>
+          <div><h3>Micro to megawatt systems</h3><p>From coastal communities to industrial hubs, Waterotor scales to a wide range of energy needs.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="how-grid">
+        <div class="reveal">
+          <span class="eyebrow">How It Works</span>
+          <h2 id="how-title">A new category of rotor design</h2>
+          <p class="lede">Our patented blade design captures both lift and drag forces. Using ram pressure and lift together to generate torque, the rotor achieves a remarkably high coefficient of power across every flow speed.</p>
+          <p>Unlike traditional turbines that need fast currents, Waterotor works where no other solution can. It is lightweight, portable and simple to deploy, which makes it ideal for remote and underdeveloped regions.</p>
+        </div>
+        <figure class="video-frame reveal">
+          <video controls preload="none" playsinline poster="assets/images/lift-animation-poster.jpg" aria-describedby="lift-desc">
+            <source src="assets/video/lift-animation.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video/lift-animation.mp4">Download the Waterotor lift animation</a>.
+          </video>
+          <figcaption>Animation: how the Waterotor rotor turns flowing water into torque.</figcaption>
+          <details>
+            <summary>Read a text description of this video</summary>
+            <p id="lift-desc">A 3D animation of a Waterotor unit resting on the seabed. Water flows across the rotor, where the curved blades catch both the push of the current and the lift created as water passes over them. The rotor drum turns steadily in the direction of the flow, driving the generator on its side.</p>
+          </details>
+        </figure>
+      </div>
+
+      <ul class="diff">
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-flow"/></svg><div><h3>Low speed capability</h3><p>Operates effectively in water speeds as low as 2 mph, where traditional energy solutions cannot.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-modular"/></svg><div><h3>Scalable and modular</h3><p>Adapts to different energy and geographic needs, with units that combine into larger arrays.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Round-the-clock reliability</h3><p>Unlike solar and wind, Waterotor delivers power 24/7 for a consistent green energy supply.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><div><h3>Eco-friendly operation</h3><p>Built from corrosion-resistant materials, with no dams or disruptive infrastructure required.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Environments and applications -->
+  <section class="section" id="applications" aria-labelledby="env-title">
+    <div class="wrap">
+      <div class="split-head reveal">
+        <div>
+          <span class="eyebrow">Applications</span>
+          <h2 id="env-title">Built for the water we already have</h2>
+        </div>
+        <p class="lede">About 70% of the earth is covered in water. The World Energy Council estimates 10,000 terawatt hours a year of unused hydropower potential worldwide.</p>
+      </div>
+      <ul class="env-grid">
+        <li class="env reveal">
+          <img src="assets/images/river-deployment.jpg" alt="Waterotor test platform moored at a wooden dock on a river lined with autumn forest" loading="lazy" width="1280" height="893">
+          <h3>Rivers</h3>
+          <p>A continuous, predictable source of flowing water. No dams needed, even in flows as slow as 2 mph.</p>
+        </li>
+        <li class="env reveal">
+          <img src="assets/images/design-1st-unit-lift.jpg" alt="A blue Waterotor unit lifted by straps into a concrete-walled canal" loading="lazy" width="1280" height="946">
+          <h3>Canals</h3>
+          <p>A compact, modular design fits existing infrastructure, powering urban and agricultural sites.</p>
+        </li>
+        <li class="env reveal">
+          <img src="assets/images/ocean-current-render.jpg" alt="Rendering of a vertical Waterotor system anchored beneath the ocean surface" loading="lazy" width="1800" height="1013">
+          <h3>Ocean currents</h3>
+          <p>Consistent currents deliver renewable energy 24/7, with no reliance on weather.</p>
+        </li>
+        <li class="env reveal">
+          <img src="assets/images/coastal-tidal-render.jpg" alt="Aerial rendering of a Waterotor tidal platform offshore from a sandy beach and hotels" loading="lazy" width="1350" height="918">
+          <h3>Tidal energy</h3>
+          <p>Tides are among the most predictable renewable sources, ideal for coastal regions.</p>
+        </li>
+      </ul>
+
+      <h3 class="apps-title reveal">From villages to offshore platforms, one technology covers a wide range of energy needs.</h3>
+      <ul class="apps">
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><div><h3>Remote communities</h3><p>Affordable power where there is no traditional infrastructure, improving quality of life.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-buoy"/></svg><div><h3>Emergency disaster relief</h3><p>Portable, renewable power for areas hit by natural disasters.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-coin"/></svg><div><h3>Low cost energy</h3><p>Electricity for people who depend on costly gas and diesel generators.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-platform"/></svg><div><h3>Offshore platforms</h3><p>Low cost, sustainable electricity for oil and gas operations at sea.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-factory"/></svg><div><h3>Industrial operations</h3><p>Reliable energy for manufacturing and processing plants where power is costly or unreliable.</p></div></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-island"/></svg><div><h3>Coastal islands</h3><p>Round-the-clock renewable energy for islands that depend on imported diesel.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="section dark" id="proof" aria-labelledby="proof-title">
+    <div class="wrap">
+      <div class="split-head reveal">
+        <div>
+          <span class="eyebrow">The Proof</span>
+          <h2 id="proof-title">Backed by science and real-world success</h2>
+        </div>
+        <p class="lede">Validated by leading institutions like the Canadian Hydrokinetic Turbine Test Centre, Waterotor has been independently proven to perform under real-world conditions.</p>
+      </div>
+
+      <div class="proof-band reveal">
+        <video id="proof-video" muted loop playsinline preload="none" poster="assets/images/river-drone-poster.jpg" aria-hidden="true">
+          <source src="assets/video/river-drone.mp4" type="video/mp4">
+        </video>
+        <button class="media-toggle" type="button" data-video="proof-video" aria-pressed="false">
+          <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+          <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+          <span class="label">Pause drone footage</span>
+        </button>
+      </div>
+
+      <ul class="big-stats reveal">
+        <li><b>85%+</b><span>Consistent efficiency over six months of Marine Institute flume testing</span></li>
+        <li><b>$25M</b><span>Invested across more than 10 years of rigorous testing</span></li>
+        <li><b>2 mph</b><span>Verified, efficient operation at low water speeds</span></li>
+        <li><b>100+</b><span>Countries where Waterotor’s technology is patent protected</span></li>
+      </ul>
+
+      <article class="case" aria-labelledby="navy-title">
+        <div class="case-media reveal">
+          <img src="assets/images/navy-deployment-crane.jpg" alt="A crane lowers a white Waterotor on a test frame from the back of a truck into a cold northern river" loading="lazy" width="1800" height="1013">
+          <img class="inset" src="assets/images/navy-barge-river.jpg" alt="Waterotor mounted on a floating barge anchored in a river" loading="lazy" width="1280" height="720">
+        </div>
+        <div class="reveal">
+          <p class="kicker">Field test</p>
+          <h3 id="navy-title">Canadian Navy deployment</h3>
+          <p>Waterotor was tested and deployed by the Canadian Navy to power remote operations, significantly reducing reliance on fossil fuels. The turbine generated clean energy in slow water while withstanding harsh conditions, proving its reliability and portability.</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Powered remote operations with renewable energy</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Verified, efficient operation in water speeds as low as 2 mph</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Withstood harsh conditions with no loss of functionality</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="case flip" aria-labelledby="mi-title">
+        <div class="case-media reveal">
+          <img src="assets/images/marine-institute-flume.jpg" alt="Waterotor submerged in the Marine Institute flume tank, seen through the viewing window" loading="lazy" width="1280" height="720">
+          <img class="inset" src="assets/images/marine-institute-viewing.jpg" alt="The Waterotor team seated at the flume tank viewing gallery while a diver works beside the unit" loading="lazy" width="1200" height="900">
+        </div>
+        <div class="reveal">
+          <p class="kicker">Lab validation</p>
+          <h3 id="mi-title">Marine Institute lab tests</h3>
+          <p>At the Marine Institute’s world-class flume tank in Newfoundland, Waterotor was tested under simulated real-world flow conditions. Over six months, it held a consistent efficiency rate above 85%, including in slow-moving water.</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Results validated by independent marine energy experts</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>No harm to marine life or ecosystems during operation</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Scalability confirmed for rivers through to ocean currents</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="field">
+        <div class="field-head reveal">
+          <h3>From the field</h3>
+          <p style="max-width:32em;margin:0">More than a decade of prototypes, river trials and lab work, from the first MK1 to today’s V-12.</p>
+        </div>
+        <ul class="gallery reveal">
+          <li class="g1"><figure><img src="assets/images/waterotor-v12-workshop.jpg" alt="A large blue and white Waterotor unit on a trailer inside a workshop" loading="lazy" width="1800" height="1350"><figcaption>Commercial Waterotor unit in the workshop</figcaption></figure></li>
+          <li class="g2"><figure><img src="assets/images/waterotor-in-snow.jpg" alt="Waterotor V1.2 covered in fresh snow outdoors" loading="lazy" width="1280" height="854"><figcaption>V1.2 during a winter endurance test</figcaption></figure></li>
+          <li class="g3"><figure><img src="assets/images/flume-tank-test.jpg" alt="Waterotor on a test frame in a bright blue flume tank" loading="lazy" width="960" height="1280"><figcaption>Flume tank testing</figcaption></figure></li>
+          <li class="g4"><figure><img src="assets/images/field-team.jpg" alt="The Waterotor crew standing on a riverbank next to the test barge" loading="lazy" width="1200" height="900"><figcaption>The crew on site</figcaption></figure></li>
+          <li class="g5"><figure><img src="assets/images/waterotor-transport.jpg" alt="A truck-mounted crane lifts a Waterotor unit onto a trailer" loading="lazy" width="1024" height="1280"><figcaption>Portable enough to move by truck</figcaption></figure></li>
+          <li class="g6"><figure><img src="assets/images/cube-unit-barge.jpg" alt="Crew members on a Waterotor test barge in a river, with a small boat alongside" loading="lazy" width="1024" height="591"><figcaption>River trials from the test barge</figcaption></figure></li>
+          <li class="g7"><figure><img src="assets/images/waterotor-lowered-river.jpg" alt="Drone view of a Waterotor being lowered by cable into fast river water" loading="lazy" width="960" height="1280"><figcaption>Lowering a unit into the river</figcaption></figure></li>
+          <li class="g8"><figure><img src="assets/images/waterotor-units-shore.jpg" alt="Two white Waterotor rotors on the grassy shore of a river" loading="lazy" width="1280" height="932"><figcaption>Rotors staged on shore</figcaption></figure></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opportunity -->
+  <section class="section" id="opportunity" aria-labelledby="opp-title">
+    <div class="wrap">
+      <div class="opp-top">
+        <div class="reveal">
+          <span class="eyebrow">The Opportunity</span>
+          <h2 id="opp-title">A $2 trillion energy market</h2>
+          <p class="lede" style="margin-top:24px">From rural villages to offshore platforms, Waterotor provides scalable solutions to the global demand for clean energy. We tap a vast, untouched resource: moving water.</p>
+          <a class="text-link" href="https://www.waterotor.com/opportunity/">Discover the full opportunity <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <p class="market reveal"><span aria-hidden="true">$2T</span><span class="sr-only">$2 trillion.</span><small>Projected renewable energy market by 2030, growing 17%</small></p>
+      </div>
+
+      <ul class="opp-stats reveal">
+        <li><b>1.18 Billion</b><span>People considered energy poor, unable to use electricity effectively</span></li>
+        <li><b>510 GW</b><span>Global renewable power capacity additions, an expansion of about 50%</span></li>
+        <li><b>660 Million</b><span>People projected to still lack electricity access in 2030</span></li>
+      </ul>
+
+      <div class="compare reveal">
+        <div class="before">
+          <h3>The challenge today</h3>
+          <p class="price" style="color:var(--navy)">$0.75+<small>per kWh</small></p>
+          <dl>
+            <div><dt>High costs in remote areas</dt><dd>Many communities rely on expensive diesel generators, making electricity unaffordable for millions.</dd></div>
+            <div><dt>Environmental impact</dt><dd>Dams and high-speed turbines often disrupt ecosystems and harm marine life.</dd></div>
+          </dl>
+        </div>
+        <div class="after">
+          <h3>With Waterotor</h3>
+          <p class="price">$0.05<small>to $0.10 per kWh</small></p>
+          <dl>
+            <div><dt>Affordable and scalable</dt><dd>Significantly lower costs for remote regions, with units that scale from 1 kW to utility arrays.</dd></div>
+            <div><dt>Environmentally friendly</dt><dd>Designed to run without harming marine ecosystems or disrupting natural waterways.</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="reach">
+        <div class="reveal">
+          <span class="eyebrow">Global Reach, Local Impact</span>
+          <h2 style="font-size:clamp(1.8rem,3.2vw,2.6rem)">Suited to every kind of market</h2>
+          <ul class="regions">
+            <li><svg class="icon" aria-hidden="true" style="width:44px;height:44px;margin-bottom:14px"><use href="#i-globe"/></svg><h3>Europe</h3><p>A strong market for meeting ambitious carbon reduction targets.</p></li>
+            <li><svg class="icon" aria-hidden="true" style="width:44px;height:44px;margin-bottom:14px"><use href="#i-factory"/></svg><h3>North America</h3><p>Modernizing infrastructure across rural, coastal and industrial areas.</p></li>
+            <li><svg class="icon" aria-hidden="true" style="width:44px;height:44px;margin-bottom:14px"><use href="#i-growth"/></svg><h3>Asia</h3><p>Rapid urbanization and growing demand need cost-effective solutions.</p></li>
+            <li><svg class="icon" aria-hidden="true" style="width:44px;height:44px;margin-bottom:14px"><use href="#i-home"/></svg><h3>Africa</h3><p>Affordable electricity for rural communities, fueling development.</p></li>
+          </ul>
+        </div>
+        <div class="yt reveal" id="yt">
+          <button type="button" data-yt="p5P0QBKdR50">
+            <svg aria-hidden="true"><use href="#i-yt-play"/></svg>
+            <span>Play video<span class="sr-only">: Waterotor on YouTube. Loads content from YouTube.</span></span>
+          </button>
+          <img src="assets/images/video-thumbnail.jpg" alt="" loading="lazy" width="1280" height="720">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Milestones -->
+  <section class="section milestones" id="milestones" aria-labelledby="ms-title">
+    <div class="wrap">
+      <div class="split-head reveal">
+        <div>
+          <span class="eyebrow">Our Journey</span>
+          <h2 id="ms-title">Key milestones</h2>
+        </div>
+        <p class="lede">Fourteen years of design, independent validation and deployment, from a first prototype in Ottawa to a tidal pilot in the Bay of Fundy.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><time datetime="2011">2011</time><div><h3>Founded, and the first prototype (MK1)</h3><p>Waterotor Energy Technologies Inc. is established in Ottawa. The MK1 generates energy from currents as slow as 1.5 mph.</p></div></li>
+        <li class="reveal"><time>2012 to 14</time><div><h3>Research and development</h3><p>Design of the first large-scale turbine and patents secured for the blade design.</p></div></li>
+        <li class="reveal"><time>2015 to 17</time><div><h3>Larger fiberglass prototype (MK2)</h3><p>Built with Canadian Composite and Black and McDonald, with first lab testing in the Marine Institute flume tank.</p></div></li>
+        <li class="reveal"><time datetime="2018">2018</time><div><h3>Commercial sample (MK3)</h3><p>A smaller system designed and built entirely by 3D printer with Design 1st in Ottawa.</p></div></li>
+        <li class="reveal"><time datetime="2019">2019</time><div><h3>Independent validation</h3><ul><li>First third-party validation report, Marine Institute</li><li>First vertical system river testing</li><li>First grid connection with the Design 1st unit</li><li>Winter endurance test, 2019 to 2020</li></ul></div></li>
+        <li class="reveal"><time datetime="2020">2020</time><div><h3>The 5 kW “cube” (MK4)</h3><p>Built and tested at the Canadian Hydrokinetic Turbine Test Centre.</p></div></li>
+        <li class="reveal"><time datetime="2021">2021</time><div><h3>$1.1M Canadian Navy contract</h3><p>First customer purchase of five units: one 5 kW and four 1 kW.</p></div></li>
+        <li class="reveal"><time datetime="2022">2022</time><div><h3>Vertical systems</h3><p>Big Cajun and V-12 designs with Herman Shellstede and Associates.</p></div></li>
+        <li class="reveal"><time datetime="2023">2023 to 24</time><div><h3>V-12 construction</h3><p>V-6 floating system design, then a new tidal system.</p></div></li>
+        <li class="reveal"><time datetime="2025">2025</time><div><h3>Bay of Fundy tidal pilot</h3><p>Waterotor technology retrofitted to The Falcon with Oceanetic Power.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section" id="team" aria-labelledby="team-title">
+    <div class="wrap">
+      <div class="team-hero">
+        <div class="reveal">
+          <span class="eyebrow">The Team</span>
+          <h2 id="team-title">Led by innovators and experts</h2>
+          <p class="lede" style="margin-top:24px">With decades of experience in renewable energy, engineering and business strategy, our team is dedicated to transforming how the world generates energy.</p>
+        </div>
+        <img class="reveal" src="assets/images/team-photo.jpg" alt="The Waterotor team and partners gathered around a white Waterotor blade in a workshop" loading="lazy" width="1200" height="900">
+      </div>
+
+      <ul class="people">
+        <li class="person reveal">
+          <img src="assets/team/fred-ferguson.jpg" alt="Portrait of Fred Ferguson" loading="lazy" width="720" height="800">
+          <h3>Fred Ferguson</h3>
+          <p class="role">CEO and CTO, Founder and Inventor</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>With over 35 years as a business leader, Fred has developed multiple breakthrough renewable energy technologies. As founder of Magenn Power, he created a helium-filled air rotor that converted wind energy into electricity. He previously led a $500M Lockheed Martin project and received the Canadian Government’s Industry Award for Excellence in Invention. A Tiger21 member, he has attracted five additional Tiger21 investors to Waterotor.</p>
+          </details>
+        </li>
+        <li class="person reveal">
+          <img src="assets/team/terry-lyons.jpg" alt="Portrait of Terry A. Lyons" loading="lazy" width="800" height="800">
+          <h3>Terry A. Lyons</h3>
+          <p class="role">Chairman of the Board</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>An accomplished executive in natural resources, finance and corporate leadership, Terry is Chairman of Sprott Resource Corp. and Polaris Materials and a director at Martinrea International. A retired Managing Partner of Brookfield Asset Management, he played a key role in major acquisitions including the Northgate Minerals and AuRico Gold merger. He received the INCO Medal for distinguished service in mining and serves on the Advisory Board of the Richard Ivey School of Business.</p>
+          </details>
+        </li>
+        <li class="person reveal">
+          <img src="assets/team/david-laird.jpg" alt="Portrait of David Laird" loading="lazy" width="800" height="800">
+          <h3>David Laird</h3>
+          <p class="role">Chief Financial Officer</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>David spent more than 16 years as a senior advisor for corporate finance and M&amp;A transactions at PricewaterhouseCoopers. With 20 years as a finance and operations executive in tech and aerospace, he brings deep experience scaling innovative technologies. At Waterotor he supports governance and strategic financial planning.</p>
+          </details>
+        </li>
+        <li class="person reveal">
+          <img src="assets/team/stephen-smith.jpg" alt="Portrait of Stephen A. Smith" loading="lazy" width="720" height="800">
+          <h3>Stephen A. Smith</h3>
+          <p class="role">Vice President of Finance</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>A Waterotor shareholder, Stephen specializes in corporate finance, tax planning and structuring tax-efficient investment vehicles. A graduate of the Sprott School of Business at Carleton University, he spent 16 years as a corporate accountant for multimillion-dollar companies in land development, retirement homes and agriculture, working closely with corporate banks, legal advisors and auditors at BDO Canada.</p>
+          </details>
+        </li>
+        <li class="person reveal">
+          <img src="assets/team/jonathan-paquette.jpg" alt="Portrait of Jonathan Paquette" loading="lazy" width="720" height="800">
+          <h3>Jonathan Paquette</h3>
+          <p class="role">Vice President</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Jonathan brings over a decade of retail management experience, consistently leading sales teams to exceed targets in profitability, service and efficiency. As Vice President at Waterotor, he oversees operations, programs and personnel, and plays a key role in commercializing the company’s water energy technology.</p>
+          </details>
+        </li>
+        <li class="person reveal">
+          <img src="assets/team/thomas-wolstenholme.jpg" alt="Portrait of Thomas Wolstenholme" loading="lazy" width="640" height="640">
+          <h3>Thomas Wolstenholme</h3>
+          <p class="role">Chief Engineer</p>
+          <details><summary>Read bio <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+            <p>Tom is a multidisciplinary mechanical systems consulting engineer with a particular aptitude for specialized science applications. He has extensive experience in mechanical systems engineering and low-pressure gas systems, a skill he has applied working with Fred since 1996 on lighter-than-air technologies.</p>
+          </details>
+        </li>
+      </ul>
+
+      <ul class="achieve">
+        <li class="reveal"><b>90%</b><span>Increase in energy efficiency since inception</span></li>
+        <li class="reveal"><b>100+</b><span>Countries with patent protection</span></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg><span><strong style="color:var(--ink)">Foresight 50, 2023.</strong> One of Canada’s 50 most investible cleantech ventures</span></li>
+        <li class="reveal"><svg class="icon" aria-hidden="true"><use href="#i-patent"/></svg><span><strong style="color:var(--ink)">U.S. Patent Office.</strong> Featured as a revolutionary new era in energy capture</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="section quote" aria-label="Press">
+    <video id="quote-video" muted loop playsinline preload="none" poster="assets/images/underwater-light-poster.jpg" aria-hidden="true">
+      <source src="assets/video/underwater-light.mp4" type="video/mp4">
+    </video>
+    <div class="wrap">
+      <figure class="reveal">
+        <blockquote cite="https://www.forbes.com/sites/robertreiss/2021/06/28/canadian-companywaterotorhas-designed-new-disruptive-clean-tech-to-produce-low-cost-electricity-from-slow-moving-water/">
+          <p>“Canadian company Waterotor has designed new, disruptive clean tech to produce low cost electricity from slow moving water.”</p>
+        </blockquote>
+        <figcaption>
+          <img src="assets/logos/forbes.png" alt="Forbes" width="132" height="36" loading="lazy">
+          <a href="https://www.forbes.com/sites/robertreiss/2021/06/28/canadian-companywaterotorhas-designed-new-disruptive-clean-tech-to-produce-low-cost-electricity-from-slow-moving-water/?sh=15ee83ed18a0" target="_blank" rel="noopener" style="color:var(--white)">Read the feature by Robert Reiss<span class="sr-only"> (opens in a new tab)</span></a>
+        </figcaption>
+      </figure>
+    </div>
+    <button class="media-toggle" type="button" data-video="quote-video" aria-pressed="false">
+      <svg class="i-pause" aria-hidden="true"><use href="#i-pause"/></svg>
+      <svg class="i-play" aria-hidden="true"><use href="#i-play"/></svg>
+      <span class="label">Pause background video</span>
+    </button>
+  </section>
+
+  <!-- Invest -->
+  <section class="section" id="invest" aria-labelledby="invest-title">
+    <div class="wrap">
+      <div class="invest-grid">
+        <div class="reveal">
+          <span class="eyebrow">Investment Opportunity</span>
+          <h2 id="invest-title">Invest in a greener future</h2>
+          <p class="lede" style="margin-top:24px">Join us in scaling the next generation of renewable energy. With proven technology and growing global demand, Waterotor offers a compelling investment opportunity.</p>
+          <ul class="reasons">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-growth"/></svg><div><h3>Rapid scalability</h3><p>Our licensing model enables fast growth and market penetration, with steady revenue from fees and royalties.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-revenue"/></svg><div><h3>Significant revenue</h3><p>The renewable energy market is projected to grow 17% to $2 trillion by 2030.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-patent"/></svg><div><h3>Protected innovation</h3><p>Patents spanning over 100 countries safeguard the technology and your investment.</p></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-lab"/></svg><div><h3>A track record of early success</h3><p>Partnerships with the Canadian Navy and Lockheed Martin validate the technology’s reliability.</p></div></li>
+          </ul>
+        </div>
+        <div class="aside reveal">
+          <img src="assets/images/tidal-platform-render.jpg" alt="Rendering of a vertical Waterotor ocean system suspended beneath a round floating platform" loading="lazy" width="1528" height="1372">
+          <div class="seek"><b>$5M</b><span>Raise to scale production, expand licensing and develop the Big Cajun ocean deployment system.</span></div>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li class="reveal"><h3>Express interest</h3><p>Fill out our investor form to get started.</p></li>
+        <li class="reveal"><h3>Meet our team</h3><p>Discuss the opportunity with our experts.</p></li>
+        <li class="reveal"><h3>Complete legal agreements</h3><p>Finalize the documentation to proceed.</p></li>
+        <li class="reveal"><h3>Receive your share certificate</h3><p>Self-directed RRSP and TFSA investors can hold Waterotor shares tax-free.</p></li>
+      </ol>
+      <div class="invest-cta reveal">
+        <a class="btn btn-primary" href="https://www.waterotor.com/invest/">Invest with us <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="https://www.waterotor.com/investors/">Investor login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section news" id="news" aria-labelledby="news-title">
+    <div class="wrap">
+      <div class="news-head reveal">
+        <div>
+          <span class="eyebrow">News and Events</span>
+          <h2 id="news-title">The latest from Waterotor</h2>
+        </div>
+        <a class="text-link" href="https://www.waterotor.com/news-events/">All articles <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="news-grid">
+        <article class="featured reveal">
+          <img src="assets/images/the-falcon-vessel.jpg" alt="" loading="lazy" width="1800" height="1200">
+          <span class="date"><time datetime="2025-06">June 2025</time>. Press release</span>
+          <h3><a href="https://www.waterotor.com/2025/06/press-release-fundy-2025/">Bay of Fundy 2025: The Falcon to run on Waterotor</a></h3>
+          <p>Oceanetic Power Corporation has acquired the key assets of former tidal power developer Ocurrent Energy. The marine vessel known as The Falcon is now owned by Oceanetic and will be retrofitted with Waterotor technology to produce more energy, more efficiently and more cost-effectively.</p>
+        </article>
+        <ul class="news-list reveal">
+          <li><span class="date"><time datetime="2024-10">October 2024</time>. Press release</span><h3><a href="https://www.waterotor.com/2024/10/press-release-breaking-news/">Self-directed RRSP and TFSA investors can now purchase Waterotor shares tax-free</a></h3></li>
+          <li><span class="date"><time datetime="2023-11">November 2023</time>. Award</span><h3><a href="https://foresightcac.com/2023/11/08/2023-foresight-50" target="_blank" rel="noopener">Named to Foresight Canada’s 2023 Foresight 50 most investible cleantech ventures<span class="sr-only"> (opens in a new tab)</span></a></h3></li>
+          <li><span class="date"><time datetime="2023-02">February 2023</time>. Event</span><h3><a href="https://www.waterotor.com/2023/02/waterotor-press-release-2023/">Fred Ferguson presents at the Natural Disasters Expo in Miami</a></h3></li>
+          <li><span class="date"><time datetime="2022-03">March 2022</time>. Event</span><h3><a href="https://www.waterotor.com/2022/03/the-big-cajun/">20 MW ocean energy generating system unveiled at Floating Wind Solutions, Houston</a></h3></li>
+          <li><span class="date"><time datetime="2021-06">June 2021</time>. Forbes</span><h3><a href="https://www.forbes.com/sites/robertreiss/2021/06/28/canadian-companywaterotorhas-designed-new-disruptive-clean-tech-to-produce-low-cost-electricity-from-slow-moving-water/?sh=15ee83ed18a0" target="_blank" rel="noopener">Forbes feature: new, disruptive clean tech for low cost electricity from slow moving water<span class="sr-only"> (opens in a new tab)</span></a></h3></li>
+          <li><span class="date">Investor forum</span><h3><a href="https://www.uscapglobal.com/news/clean-tech-producing-low-cost-electricity-from-slow-moving-water.html" target="_blank" rel="noopener">Landmark and Bloomberg LP Energy Investor Forum<span class="sr-only"> (opens in a new tab)</span></a></h3></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap faq-grid">
+      <div class="reveal">
+        <span class="eyebrow">FAQs</span>
+        <h2 id="faq-title">Questions, answered</h2>
+        <p class="lede" style="margin-top:24px">Common questions about Waterotor’s technology and its benefits. Can’t find what you need? <a href="#contact">Get in touch</a>.</p>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>What are the features and benefits of the Waterotor? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer">
+            <p>Waterotor generates electricity in slow moving water, below 6.5 mph, where no other in-water technology has been proven. It uses no fuel, produces no emissions during operation, has low ecological impact and can replace technologies that generate CO2 and other pollutants. The small 1,000 watt Waterotor is designed to be deployed as a standalone unit.</p>
+            <p>It is simple to operate and easy to maintain, making it well suited to regions with little infrastructure. Early markets include coastal communities, remote ocean islands and isolated rural sites where diesel power often costs $0.75 or more per kWh.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What are the advantages of the 1,000 watt Waterotor over the competition? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer">
+            <p>No other technology has proven profitable operation in water moving slower than 6.5 mph. Waterotor has proven both operation and low cost economics across the 2 to 6.5 mph range.</p>
+            <ul>
+              <li>Portable: fits in the back of a truck, with up to 20 units in an ISO container</li>
+              <li>Assembled on site, with sand or concrete poured into two side molds to hold it in place in currents up to 2.68 m/s</li>
+              <li>Needs only minimal water depth</li>
+              <li>Easily relocated by two or three people</li>
+              <li>Rotomolded plastic that will not corrode in salt water, with high grade stainless steel components</li>
+              <li>No fuel costs, generating power at around $0.05 to $0.10 per kWh, compared with diesel at 5 to 10 times the price</li>
+              <li>Generates power 24/7, while wind or solar average about 20% of peak output per day</li>
+            </ul>
+          </div>
+        </details>
+        <details>
+          <summary>Will Waterotor harm fish and marine life? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Waterotor is a low impact technology. Its slow rotation is fish-friendly: the Ferguson blades and central drum turn in a rolling motion at the speed of the river, creating a “water cushion” that helps fish avoid contact. Rotors also smooth flow rates, reducing erosion, protecting shorelines and creating slower pools that help fish travelling against the current. There are no emissions and no significant civil engineering required.</p></div>
+        </details>
+        <details>
+          <summary>Is Waterotor a tidal device? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Waterotors are currently designed for uni-directional, constant flow, such as major ocean currents. A new tidal system is in development, with a pilot project in the Bay of Fundy.</p></div>
+        </details>
+        <details>
+          <summary>Will it work in a river that freezes over in winter? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Waterotor cannot operate where the submerged flow stops moving. It will work beneath a surface ice sheet if the waterway is deep enough, and it is robust and unaffected by ice particles.</p></div>
+        </details>
+        <details>
+          <summary>How long is Waterotor designed to last? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>On the 1,000 watt Waterotor, the mean time between failure for all parts is a minimum of 10 years. On larger Waterotors, all components are designed to last a minimum of 20 years. Waterotor intends to offer a one year warranty on all products.</p></div>
+        </details>
+        <details>
+          <summary>Do I need permits for Waterotor? <svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Probably, if you live in North America or parts of Europe, and Waterotor is looking into those requirements. Our target markets are the 1.2 billion people who have no electricity today and the millions of homes and businesses running on diesel generators, where permits will likely be minimal or not required.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section dark contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-title">Unlock the power of water</h2>
+        <p class="lede">Contact us to explore investment opportunities and learn more about our technology.</p>
+        <ul class="contact-list">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><span>Head office</span><a href="https://maps.google.com/?q=236+Metcalfe+St,+Ottawa,+ON+K2P+1R3" target="_blank" rel="noopener">236 Metcalfe St, Ottawa, ON K2P 1R3, Canada<span class="sr-only"> (opens map in a new tab)</span></a></div></li>
+          <li><svg aria-hidden="true"><use href="#i-phone"/></svg><div><span>Phone</span><a href="tel:+16137472460">(613) 747-2460</a></div></li>
+          <li><svg aria-hidden="true"><use href="#i-mail"/></svg><div><span>Email</span><a href="mailto:info@waterotor.com">info@waterotor.com</a></div></li>
+        </ul>
+      </div>
+      <form class="signup reveal" id="signup" novalidate aria-labelledby="signup-title">
+        <h3 id="signup-title">Stay updated on our latest technology</h3>
+        <p>News, deployments and investor updates. No spam, unsubscribe anytime.</p>
+        <label for="signup-email">Email address</label>
+        <input id="signup-email" name="email" type="email" autocomplete="email" required aria-describedby="signup-error">
+        <p class="error" id="signup-error" hidden></p>
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+        <p class="status" role="status" aria-live="polite"></p>
+        <p class="hint">By subscribing you agree to our <a href="https://www.waterotor.com/privacy-policy/">Privacy Policy</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="assets/logos/waterotor-logo-white.svg" alt="Waterotor Energy Technologies Inc." width="170" height="68" loading="lazy">
+        <p style="max-width:22em">Patented hydrokinetic technology that collects clean, affordable energy from moving water.</p>
+        <ul class="social" aria-label="Waterotor on social media">
+          <li><a href="https://www.linkedin.com/company/waterotor-energy-technologies-inc-/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg><span class="sr-only">LinkedIn (opens in a new tab)</span></a></li>
+          <li><a href="https://www.youtube.com/@WaterotorEnergyTechnologies" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-youtube"/></svg><span class="sr-only">YouTube (opens in a new tab)</span></a></li>
+          <li><a href="https://www.facebook.com/waterotor" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-facebook"/></svg><span class="sr-only">Facebook (opens in a new tab)</span></a></li>
+          <li><a href="https://www.instagram.com/waterotor/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-instagram"/></svg><span class="sr-only">Instagram (opens in a new tab)</span></a></li>
+        </ul>
+      </div>
+      <nav aria-labelledby="f-site">
+        <h2 id="f-site">Sitemap</h2>
+        <ul>
+          <li><a href="#technology">Technology</a></li>
+          <li><a href="#proof">Proof</a></li>
+          <li><a href="#opportunity">Opportunity</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#news">News</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-inv">
+        <h2 id="f-inv">Investors</h2>
+        <ul>
+          <li><a href="#invest">Invest Today</a></li>
+          <li><a href="https://www.waterotor.com/investors/">Investor Login</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li>236 Metcalfe St<br>Ottawa, ON K2P 1R3<br>Canada</li>
+          <li><a href="tel:+16137472460">(613) 747-2460</a></li>
+          <li><a href="mailto:info@waterotor.com">info@waterotor.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p style="margin:0">© <span id="year">2026</span> Waterotor Energy Technologies Inc. All rights reserved.</p>
+      <ul aria-label="Legal">
+        <li><a href="https://www.waterotor.com/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="https://www.waterotor.com/terms-and-conditions/">Terms and Conditions</a></li>
+        <li><a href="https://www.waterotor.com/cookie-policy/">Cookie Policy</a></li>
+        <li><a href="https://www.waterotor.com/disclaimer/">Disclaimer</a></li>
+        <li><button class="linklike" type="button" id="open-consent">Cookie Preferences</button></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie consent -->
+<section class="consent" id="consent" role="dialog" aria-modal="false" aria-labelledby="consent-title" aria-describedby="consent-desc">
+  <h2 id="consent-title">Your privacy</h2>
+  <p id="consent-desc">We use essential cookies to run this site, and optional cookies to understand how it’s used and improve it. You can change your choice anytime. See our <a href="https://www.waterotor.com/cookie-policy/">Cookie Policy</a>.</p>
+  <div class="prefs" id="consent-prefs" hidden>
+    <div class="pref"><label for="c-essential">Essential<small>Required for the site to work. Always on.</small></label><input type="checkbox" id="c-essential" checked disabled></div>
+    <div class="pref"><label for="c-analytics">Analytics<small>Helps us understand how visitors use the site.</small></label><input type="checkbox" id="c-analytics"></div>
+    <div class="pref"><label for="c-marketing">Marketing<small>Used to measure campaigns and show relevant content.</small></label><input type="checkbox" id="c-marketing"></div>
+  </div>
+  <div class="consent-actions">
+    <button class="btn btn-outline" type="button" data-consent="reject">Reject optional</button>
+    <button class="btn btn-primary" type="button" data-consent="accept">Accept all</button>
+    <button class="btn btn-primary full" type="button" data-consent="save" hidden>Save my choices</button>
+    <button class="btn-plain full" type="button" id="consent-manage" aria-expanded="false" aria-controls="consent-prefs">Manage preferences</button>
+  </div>
+</section>
+
+<script>
+(function(){
+  var doc = document.documentElement;
+  doc.classList.add('js');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function store(key, val){ try{ if(val === undefined) return localStorage.getItem(key); localStorage.setItem(key, val); }catch(e){ return null; } }
+
+  /* Year */
+  var y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
+
+  /* Header */
+  var header = document.querySelector('.site-header');
+  function onScroll(){ header.classList.toggle('is-solid', window.scrollY > 40); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Mobile nav */
+  var toggle = document.querySelector('.nav-toggle'), nav = document.getElementById('site-nav');
+  function setNav(open){
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.querySelector('.sr-only').textContent = open ? 'Close menu' : 'Menu';
+    nav.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+  }
+  toggle.addEventListener('click', function(){ setNav(toggle.getAttribute('aria-expanded') !== 'true'); });
+  nav.addEventListener('click', function(e){ if(e.target.closest('a')) setNav(false); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true'){ setNav(false); toggle.focus(); }
+  });
+
+  /* Background videos: autoplay only without reduced motion, always pausable */
+  var toggles = document.querySelectorAll('.media-toggle');
+  toggles.forEach(function(btn){
+    var video = document.getElementById(btn.dataset.video);
+    var label = btn.querySelector('.label');
+    var base = label.textContent.replace(/^Pause /, '');
+    function sync(){
+      var paused = video.paused;
+      btn.setAttribute('aria-pressed', String(paused));
+      label.textContent = (paused ? 'Play ' : 'Pause ') + base;
+    }
+    btn.addEventListener('click', function(){
+      btn.dataset.user = '1';
+      if(video.paused){ var p = video.play(); if(p) p.catch(function(){}); } else { video.pause(); }
+    });
+    video.addEventListener('play', sync); video.addEventListener('pause', sync);
+    if(reduceMotion){ video.removeAttribute('autoplay'); video.pause(); sync(); return; }
+    if(video.id === 'hero-video'){
+      var tryPlay = function(){ if(btn.dataset.user || !video.paused) return; var p = video.play(); if(p) p.catch(sync); };
+      tryPlay();
+      document.addEventListener('visibilitychange', function(){ if(!document.hidden) tryPlay(); });
+      sync(); return;
+    }
+    /* Off-screen videos play only while visible */
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(btn.dataset.user) return;
+          if(en.isIntersecting){ var p = video.play(); if(p) p.catch(function(){}); } else { video.pause(); btn.setAttribute('aria-pressed','false'); }
+        });
+      }, {threshold:.25}).observe(video);
+    }
+    sync();
+  });
+
+  /* Reveal on scroll */
+  var reveals = document.querySelectorAll('.reveal');
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* YouTube: load only on request */
+  var ytBtn = document.querySelector('[data-yt]');
+  if(ytBtn) ytBtn.addEventListener('click', function(){
+    var box = document.getElementById('yt');
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + ytBtn.dataset.yt + '?autoplay=1&rel=0';
+    f.title = 'Waterotor video on YouTube';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen = true;
+    box.innerHTML = ''; box.appendChild(f); f.focus();
+  });
+
+  /* Newsletter (mockup only) */
+  var form = document.getElementById('signup');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var input = form.querySelector('input'), err = document.getElementById('signup-error'), status = form.querySelector('.status');
+    status.textContent = '';
+    if(!input.value.trim() || !input.checkValidity()){
+      input.setAttribute('aria-invalid','true');
+      err.textContent = input.value.trim() ? 'Enter a valid email address, like name@example.com.' : 'Enter your email address to subscribe.';
+      err.hidden = false; input.focus(); return;
+    }
+    input.removeAttribute('aria-invalid'); err.hidden = true;
+    status.textContent = 'Thanks. You are subscribed to Waterotor updates.';
+    form.reset();
+  });
+
+  /* Cookie consent */
+  var panel = document.getElementById('consent'),
+      manage = document.getElementById('consent-manage'),
+      prefs = document.getElementById('consent-prefs'),
+      saveBtn = panel.querySelector('[data-consent="save"]'),
+      analytics = document.getElementById('c-analytics'),
+      marketing = document.getElementById('c-marketing'),
+      lastFocus = null;
+
+  function openConsent(withPrefs){
+    var saved = null; try{ saved = JSON.parse(store('wr-consent') || 'null'); }catch(e){}
+    if(saved){ analytics.checked = !!saved.analytics; marketing.checked = !!saved.marketing; }
+    panel.classList.add('is-visible');
+    showPrefs(!!withPrefs);
+  }
+  function closeConsent(){
+    panel.classList.remove('is-visible');
+    if(lastFocus){ lastFocus.focus(); lastFocus = null; }
+  }
+  function showPrefs(show){
+    prefs.hidden = !show; saveBtn.hidden = !show;
+    manage.setAttribute('aria-expanded', String(show));
+    manage.textContent = show ? 'Hide preferences' : 'Manage preferences';
+  }
+  function save(a, m){
+    store('wr-consent', JSON.stringify({analytics:a, marketing:m, date:new Date().toISOString()}));
+    closeConsent();
+  }
+  panel.addEventListener('click', function(e){
+    var b = e.target.closest('[data-consent]'); if(!b) return;
+    var kind = b.dataset.consent;
+    if(kind === 'accept') save(true, true);
+    else if(kind === 'reject') save(false, false);
+    else save(analytics.checked, marketing.checked);
+  });
+  manage.addEventListener('click', function(){ showPrefs(prefs.hidden); if(!prefs.hidden) analytics.focus(); });
+  document.getElementById('open-consent').addEventListener('click', function(){
+    lastFocus = this; openConsent(true);
+    panel.querySelector('h2').setAttribute('tabindex','-1'); panel.querySelector('h2').focus();
+  });
+  if(!store('wr-consent')) setTimeout(function(){ openConsent(false); }, 900);
+})();
+</script>
+</body>
+</html>
